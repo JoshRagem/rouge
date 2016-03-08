@@ -1,5 +1,13 @@
 [{<<"cowboy">>,{pkg,<<"cowboy">>,<<"1.0.3">>},0},
  {<<"cowlib">>,{pkg,<<"cowlib">>,<<"1.0.1">>},1},
- {<<"goldrush">>,{pkg,<<"goldrush">>,<<"0.1.6">>},1},
- {<<"ranch">>,{pkg,<<"ranch">>,<<"1.1.0">>},1},
- {<<"lager">>,{pkg,<<"lager">>,<<"2.1.1">>},0}].
+ {<<"ezmq">>,
+  {git,"git://github.com/zeromq/ezmq",
+       {ref,"6ce307dc43c64955b56f9de4dd3c9f631ae08a93"}},
+  0},
+ {<<"gen_listener_tcp">>,
+  {git,"https://github.com/travelping/gen_listener_tcp.git",
+       {ref,"afc9ba8d966d262f578f0203fbf80d48d4facf0c"}},
+  1},
+ {<<"goldrush">>,{pkg,<<"goldrush">>,<<"0.1.7">>},1},
+ {<<"lager">>,{pkg,<<"lager">>,<<"2.1.1">>},0},
+ {<<"ranch">>,{pkg,<<"ranch">>,<<"1.1.0">>},1}].

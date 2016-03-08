@@ -28,7 +28,12 @@ start_link() ->
 
 %% Child :: {Id,StartFunc,Restart,Shutdown,Type,Modules}
 init([]) ->
-    {ok, { {one_for_all, 0, 1}, []} }.
+    Child = #{id => z,
+              start => {rouge_zerver, start_link, []}
+             },
+    {ok, {#{strategy => one_for_all,
+            intensity => 0,
+            period =>1}, [Child]}}.
 
 %%====================================================================
 %% Internal functions

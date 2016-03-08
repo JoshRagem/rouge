@@ -8,7 +8,8 @@
     stdlib,
     crypto,
     lager,
-    cowboy
+    cowboy,
+    ezmq
    ]},
   {env,[]},
   {modules, []},

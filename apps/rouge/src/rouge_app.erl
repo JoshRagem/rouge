@@ -1,4 +1,4 @@
--module('rouge_app').
+-module(rouge_app).
 -behaviour(application).
 
 -export([start/2
@@ -16,14 +16,7 @@
 
 start(_StartType, _StartArgs) ->
     lager:info("hello",[]),
-    Dispatch = cowboy_router:compile([
-                                      {'_', [
-                                             {"/", rouge_socket_handler, []}
-                                            ]}
-                                     ]),
-    {ok, _} = cowboy:start_http(http, 100, [{port, 8080}],
-                                [{env, [{dispatch, Dispatch}]}]),
-    'rouge_sup':start_link().
+    rouge_sup:start_link().
 
 %%--------------------------------------------------------------------
 stop(_State) ->
